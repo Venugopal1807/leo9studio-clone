@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-black dark:bg-gray-900 dark:text-white antialiased;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* because items are duplicated */
+}
+
+/* Optional: make marquee smoother on some devices */
+.marquee-smooth {
+  will-change: transform;
+}
