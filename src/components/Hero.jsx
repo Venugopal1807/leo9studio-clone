@@ -23,7 +23,7 @@ export default function Hero() {
         <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">
           Your Trusted UI UX Design Agency.
         </p>
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-black dark:text-white">
           Design <br /> Transform <br /> Accelerate
         </h1>
         <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
