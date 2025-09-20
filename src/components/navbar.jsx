@@ -21,17 +21,18 @@ export default function Navbar({ onOpenMenu }) {
   return (
     <header className="fixed top-0 left-0 w-full bg-white text-black dark:bg-gray-900 dark:text-white border-b z-50">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-3 items-center h-16">
-          {/* LEFT: logo */}
+        <div className="flex items-center justify-between h-16">
+          {/* LEFT: Logo */}
           <div className="flex items-center gap-3">
             <img src={NavLogo} alt="leo9 logo" className="h-8 w-auto" />
+            <span className="font-bold text-lg hidden sm:inline">leo9</span>
           </div>
 
-          {/* CENTER: Desktop Links */}
+          {/* CENTER: Links (hidden on mobile) */}
           <nav className="hidden md:flex justify-center space-x-8 font-medium text-sm">
             <a href="#work" className="hover:text-pink-500">Work</a>
 
-            {/* Services  */}
+            {/* Services Dropdown */}
             <div className="relative group">
               <button className="hover:text-pink-500">Services</button>
               <div className="absolute hidden group-hover:block bg-white dark:bg-gray-800 mt-2 rounded-md shadow-lg w-40">
@@ -43,7 +44,7 @@ export default function Navbar({ onOpenMenu }) {
 
             <a href="#clients" className="hover:text-pink-500">Clients</a>
 
-            {/* About  */}
+            {/* About Dropdown */}
             <div className="relative group">
               <button className="hover:text-pink-500">About</button>
               <div className="absolute hidden group-hover:block bg-white dark:bg-gray-800 mt-2 rounded-md shadow-lg w-40">
@@ -56,8 +57,9 @@ export default function Navbar({ onOpenMenu }) {
             <a href="#knowledge" className="hover:text-pink-500">Knowledge</a>
           </nav>
 
-          {/* RIGHT: Theme toggle + Contact + Mobile Menu */}
-          <div className="flex items-center justify-end gap-3">
+          {/* RIGHT: Theme Toggle + Contact + Mobile Menu */}
+          <div className="flex items-center gap-3">
+            {/* Theme toggle */}
             <button
               onClick={() => setDark((s) => !s)}
               aria-label="Toggle theme"
@@ -65,20 +67,21 @@ export default function Navbar({ onOpenMenu }) {
             >
               {dark ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 3.5a.75.75 0 01.75.75v1.25a.75.75 0 01-1.5 0V4.25A.75.75 0 0110 3.5z..." />
+                  <path d="M10 3.5a.75.75..." />
                 </svg>
               ) : (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M17.293 13.293A8 8 0..." />
+                  <path d="M17.293 13.293A8..." />
                 </svg>
               )}
             </button>
 
-            <a href="#contact" className="px-4 py-2 bg-black text-white rounded-md text-sm font-medium hover:opacity-95">
+            <a href="#contact" className="hidden sm:inline px-4 py-2 bg-black text-white rounded-md text-sm font-medium hover:opacity-95">
               Contact
             </a>
 
-            <button className="md:hidden p-2 ml-1" onClick={onOpenMenu} aria-label="Open menu">
+            {/* Mobile Menu Button */}
+            <button className="md:hidden p-2" onClick={onOpenMenu} aria-label="Open menu">
               <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
