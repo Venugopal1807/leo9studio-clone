@@ -4,7 +4,6 @@ import { loadFull } from "tsparticles";
 
 const LionAnimation = () => {
   const particlesInit = useCallback(async (engine) => {
-    // make sure the full bundle is loaded
     await loadFull(engine);
   }, []);
 
@@ -31,7 +30,7 @@ const LionAnimation = () => {
           enable: true,
           type: "inline",
           move: { radius: 5 },
-          url: "/ui clone/Public/one.svg", // <-- must be in /public
+          url: "/ui clone/Public/one.svg", 
           draw: { enable: true, stroke: { color: "rgba(255,255,255,0.2)" } },
         },
       }}

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const AnimatedDots = () => {
   const [connectionTimer, setConnectionTimer] = useState(0);
 
-  // Generate concentric radial dots
+  // concentric radial dots
   const generateRadialDots = () => {
     const dots = [];
     dots.push({ id: "center", x: 0, y: 0, size: 6, ring: 0 });

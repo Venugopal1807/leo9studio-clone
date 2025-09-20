@@ -61,13 +61,13 @@ const LionParticles = () => {
       style={{
         width: "400px",
         height: "400px",
-        background: "transparent", // ✅ No white background
-        border: "none",            // ✅ No border box
-        position: "absolute",      // ✅ Overlays instead of pushing layout
+        background: "transparent", 
+        border: "none",            
+        position: "absolute",      
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        pointerEvents: "none",     // ✅ Prevents blocking clicks
+        pointerEvents: "none",    
       }}
     />
   );

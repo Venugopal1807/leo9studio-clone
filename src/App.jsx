@@ -12,7 +12,7 @@ import FAQ from "./components/FAQ.jsx";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // CTA handler (optional for Hero or other sections)
+  // CTA handler 
   const handleCTAClick = () => {
     alert("CTA clicked — replace with modal or form");
   };

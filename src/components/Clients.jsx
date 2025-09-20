@@ -1,4 +1,3 @@
-// src/components/Clients.jsx
 import React from "react";
 
 export default function Clients({ duration = 20 }) {

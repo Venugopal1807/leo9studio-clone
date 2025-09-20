@@ -8,10 +8,9 @@ body {
 
 @keyframes marquee {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); } /* because items are duplicated */
+  100% { transform: translateX(-50%); } 
 }
 
-/* Optional: make marquee smoother on some devices */
 .marquee-smooth {
   will-change: transform;
 }

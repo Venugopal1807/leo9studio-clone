@@ -11,7 +11,7 @@ export default function MobileMenu({ isOpen, onClose }) {
     if (section) {
       setTimeout(() => {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 150); // wait for animation to close menu
+      }, 150); 
     }
   };
 
