@@ -23,9 +23,8 @@ export default function Testimonials() {
 
   return (
     <section className="py-16 bg-gray-50 dark:bg-gray-900 text-center">
-      <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
-        What Clients Say
-      </h2>
+      <h2 className="text-3xl font-bold mb-8">What Clients Say</h2>
+
       <div className="max-w-xl mx-auto relative px-4">
         <AnimatePresence mode="wait">
           <motion.div
@@ -34,36 +33,19 @@ export default function Testimonials() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow"
+            className="bg-white dark:bg-gray-800 dark:text-white p-6 rounded-2xl shadow"
           >
-            <img
-              src={testimonials[index].img}
-              alt={testimonials[index].name}
-              className="w-20 h-20 rounded-full mx-auto mb-4"
-            />
-            <h3 className="font-semibold text-gray-900 dark:text-white">
-              {testimonials[index].name}
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
-              {testimonials[index].role}
-            </p>
-            <p className="text-gray-700 dark:text-gray-300">{testimonials[index].text}</p>
+            <img src={testimonials[index].img} alt={testimonials[index].name}
+              className="w-20 h-20 rounded-full mx-auto mb-4" />
+            <h3 className="font-semibold">{testimonials[index].name}</h3>
+            <p className="text-gray-500 dark:text-gray-300 text-sm mb-3">{testimonials[index].role}</p>
+            <p>{testimonials[index].text}</p>
           </motion.div>
         </AnimatePresence>
 
         <div className="flex justify-center gap-4 mt-6">
-          <button
-            onClick={prev}
-            className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-105 transition"
-          >
-            ◀
-          </button>
-          <button
-            onClick={next}
-            className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-105 transition"
-          >
-            ▶
-          </button>
+          <button onClick={prev} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full">◀</button>
+          <button onClick={next} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full">▶</button>
         </div>
       </div>
     </section>
