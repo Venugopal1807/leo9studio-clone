@@ -21,8 +21,8 @@ export default function Navbar({ onOpenMenu }) {
   return (
     <header className="fixed top-0 left-0 w-full bg-white text-black dark:bg-gray-900 dark:text-white border-b z-50">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-3 items-center h-16">
-          {/* LEFT: logo */}
+        <div className="flex items-center justify-between h-16">
+          {/* LEFT: Logo */}
           <div className="flex items-center gap-3">
             <img
               src={NavLogo}
@@ -33,7 +33,7 @@ export default function Navbar({ onOpenMenu }) {
             />
           </div>
 
-          {/* CENTER LINKS */}
+          {/* CENTER: Nav Links */}
           <nav className="hidden md:flex justify-center space-x-8 font-medium text-sm">
             <a href="#work" className="hover:text-pink-500">Work</a>
 
@@ -62,8 +62,8 @@ export default function Navbar({ onOpenMenu }) {
             <a href="#knowledge" className="hover:text-pink-500">Knowledge</a>
           </nav>
 
-          {/* RIGHT SECTION */}
-          <div className="flex items-center justify-end gap-3">
+          {/* RIGHT: Buttons */}
+          <div className="flex items-center gap-4">
             {/* Theme Toggle */}
             <button
               onClick={() => setDark((s) => !s)}
@@ -71,20 +71,19 @@ export default function Navbar({ onOpenMenu }) {
               className="p-2 rounded-md border dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
             >
               {dark ? (
-                // Sun icon
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5 text-yellow-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" className="h-5 w-5 text-yellow-400">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-7.364l-1.414 1.414M7.05 16.95l-1.414 1.414M16.95 16.95l1.414 1.414M7.05 7.05L5.636 5.636M12 8a4 4 0 100 8 4 4 0 000-8z"/>
                 </svg>
               ) : (
-                // Moon icon
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" className="h-5 w-5 text-gray-700">
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
                 </svg>
               )}
             </button>
 
-            {/* Contact button */}
+            {/* Contact Button */}
             <a
               href="#contact"
               className="px-4 py-2 bg-black dark:bg-white dark:text-black text-white rounded-md text-sm font-medium hover:opacity-90"
@@ -92,8 +91,8 @@ export default function Navbar({ onOpenMenu }) {
               Contact
             </a>
 
-            {/* Mobile Menu */}
-            <button className="md:hidden p-2 ml-1" onClick={onOpenMenu} aria-label="Open menu">
+            {/* Mobile Menu Button */}
+            <button className="md:hidden p-2" onClick={onOpenMenu} aria-label="Open menu">
               <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
